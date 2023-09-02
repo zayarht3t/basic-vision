@@ -385,3 +385,84 @@ input[type=checkbox] {
       font-size: 3.2rem;
     }
   }
+
+  .emailSection{
+    display: flex;
+    background-color: #51DBFF;
+  }
+
+  .emailText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    text-align: left;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sub{
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+  }
+  
+
+  .emailInput{
+    border: none;
+    padding: 8px;
+  }
+  .emailInput:focus{
+    border: none;
+    outline: none;
+  }
+
+  .emailBtn{
+    border: none;
+    background-color: burlywood;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+
+  }
+
+  .emailLogo{
+    flex: 1;
+  }
+
+footer{
+  margin: 40px 0;
+  width: 100%;
+}
+
+.foot{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.foot > ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.foot > ul > li{
+  font-size: 18px;
+  cursor: pointer;
+}
