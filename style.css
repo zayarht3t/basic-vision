@@ -347,6 +347,28 @@ input[type=checkbox] {
     border-radius: 15px;
     transition: all .38s ease;
   }
+
+  .heroLogo{
+    animation: move ease 1s infinite alternate ;
+  }
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  @keyframes move {
+    from{
+      transform: translateY(-25px);
+    }
+  }
   .box h3{
     font-size: 23px;
     font-weight: 600;
