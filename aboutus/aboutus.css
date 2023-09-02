@@ -1,0 +1,79 @@
+header{
+  position:sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content:space-between;
+ opacity: 0.8;
+ }
+#logo{
+  font-family: cursives;
+  font-size: 3.5rem;
+  text-align: left;
+  color:black;
+  font-weight: 1000;
+ }
+ nav{
+  width: 40%;
+  padding-right: 2%;
+ }
+ nav a{
+  font-size: 1rem;
+  color: rgb(82, 82, 238);
+   font-weight: 500;
+  margin-left: 1rem;
+  line-height: 250%;
+   transition: 0.5s;
+}
+nav a:hover {
+  color: rgb(2, 2, 158);
+}
+nav a:active{
+  color: rgb(2, 2, 158);
+}
+#contectus{
+  padding-left: 15%;
+}
+#upperpage{
+  padding-top: 10%;
+  padding-left: 15%;
+  height: calc(100%/4);
+}
+.layout{
+  display: flex;
+ height: calc(100%/4)
+
+}
+
+.content{
+ width: 30%;
+  padding: 5%;
+  padding-top: 15%;
+  margin: 15px;
+  text-align: justify;
+  line-height: 150%;
+ 
+}
+.title{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-weight: 500px;
+  font-style: italic;
+}
+ img{
+  width: 40%;
+  height: 50%;
+}
+button{
+  border: none;
+  margin-top: 10%;
+  width: 8rem;
+  height: 2.5rem;
+  font-weight: 800;
+  border-radius: 1rem;
+  background-color: rgb(230, 174, 22);
+}
+
