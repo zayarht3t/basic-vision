@@ -50,6 +50,23 @@
         background-color: hsla(0, 0%, 100%, 0.9) !important;
         backdrop-filter: saturate(200%) blur(25px);
       }
+
+      .err{
+        margin: 0 auto;
+        padding: 10px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 7px;
+      }
+
+      .active{
+    opacity: 1;
+}
+
+.unactive{
+    opacity: 0;
+}
     </style>
   
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -73,12 +90,12 @@
   
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form>
+              <form method="post" id="myForm">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row">
                   <div class="col-md-6 mb-4" style="width: 100%;">
                     <div class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
+                      <input type="text" id="form3Example1" class="form-control" name="username"/>
                       <label class="form-label" for="form3Example1">username</label>
                     </div>
                   </div>
@@ -86,13 +103,13 @@
   
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
+                  <input type="email" id="form3Example3" class="form-control" name="email" />
                   <label class="form-label" for="form3Example3">Email address</label>
                 </div>
   
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
+                  <input type="password" id="form3Example4" class="form-control" name="password"/>
                   <label class="form-label" for="form3Example4">Password</label>
                 </div>
   
@@ -110,6 +127,9 @@
                 </button>
                 <p>Already have an account? <span style="text-decoration: underline;cursor: pointer;margin: 20px 0;">Sign In</span></p>
               </form>
+              <div class="err unactive">
+                <p class="error">Credentials went wrong</p>
+              </div>
             </div>
           </div>
         </div>
@@ -120,5 +140,68 @@
 </body>
 <script>
 
-</script>
+  const form = document.getElementById("myForm");
+  
+  // Add an event listener to the form for the submit event
+  form.addEventListener("submit", function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+  
+    // Get form values by accessing the input elements using their "name" attributes
+    let username = form.elements["username"].vaule;
+    const email = form.elements["email"].value;
+    const password = form.elements["password"].value;
+  
+    // You now have the values from the form
+    username = "test1"
+    console.log(username)
+    console.log("Name:", email);
+    console.log("Email:", password);
+  
+    const credentials = {
+    username: username,
+    email: email,
+    password: password,
+  };
+  
+  // Convert the credentials object to JSON
+  const requestBody = JSON.stringify(credentials);
+  const errorTag = document.getElementsByClassName("err")[0];
+        const login = async () =>{
+          try {
+              const response =await fetch("http://localhost:8000/api/auth/register",{
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json", // Specify the content type as JSON
+              },
+              credentials: "include", // Include credentials in the request (cookies or HTTP authentication)
+              body: requestBody, 
+          }
+          )
+  
+          if(response.ok){
+              console.log(response.json());
+              localStorage.setItem("auth","1")
+              window.location.href = "http://127.0.0.1:5500/register/signin.html"
+          }else{
+            errorTag.classList.remove("unactive")
+            errorTag.classList.add("active")
+          }
+          } catch (error) {              
+            errorTag.classList.remove("unactive")
+            errorTag.classList.add("active")
+            console.log(error);
+
+              
+          }
+          }
+  
+          login();
+  
+  });
+  
+  
+  
+  
+  </script>
 </html>
