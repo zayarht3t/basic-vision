@@ -369,7 +369,99 @@ input[type=checkbox] {
       transform: translateY(-25px);
     }
   }
+  .box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .box h5{
+    font-size: 15px;
+    font-weight: 600;
+    color: #b7b4bb;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+  }
+  .icons i{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: all .38s ease;
+  }
+  .icons i:hover{
+    transform: scale(1.2);
+  }
+  .box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+  
+  @media(max-width: 1240px){
+    .team{
+      width: 100%;
+      height: auto;
+      padding: 90px 2%;
+    }
+    .center h1{
+      font-size: 3.2rem;
+    }
+  }
 
+  .emailSection{
+    display: flex;
+    background-color: #51DBFF;
+  }
+
+  .emailText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    text-align: left;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sub{
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+  }
+  
+
+  .emailInput{
+    border: none;
+    padding: 8px;
+  }
+  .emailInput:focus{
+    border: none;
+    outline: none;
+  }
+
+  .emailBtn{
+    border: none;
+    background-color: burlywood;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+
+  }
+
+  .emailLogo{
+    flex: 1;
+  }
 
 footer{
   margin: 40px 0;

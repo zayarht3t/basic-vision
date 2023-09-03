@@ -5,11 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-</script>
-<script type="module" src="index.js"></script>
+  <link rel="stylesheet" href="navbar.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +47,7 @@
   </nav>
   <div class="hero-session">
     <div class="content">
-      <h1 class="mainText">Pose Landmark Detection</h1>
+      <h1 class="mainText">Translating gastre into Digital magic</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam placeat ad labore animi accusamus iure tempora
         alias, sequi accusantium sunt impedit velit nesciunt in, nemo ipsa cumque vitae facilis rerum.
@@ -65,33 +61,6 @@
       <img src="eye.png" width="700" class="mainEye heroLogo" height="700" alt="" srcset="">
     </div>
   </div>
-  <section id="demos" class="invisible">
-    <h2 style="margin: 20px 0;font-size: 32px;">Demo: Detecting Images</h2>
-    <p><b>Click on an image below</b> to see the key landmarks of the body.</p>
-    <div style="max-height: 400px;overflow: hidden;margin-bottom: 20px;">
-        <div class="detectOnClick">
-          <!-- source: https://pixabay.com/photos/woman-asia-beautiful-cambodia-1822514/ -->
-          <img src="https://assets.codepen.io/9177687/woman-ge0f199f92_640.jpg" width="100%" crossorigin="anonymous" title="Click to get detection!" />
-        </div>
-        <div class="detectOnClick">
-          <!-- source: https://pixabay.com/photos/woman-relaxation-portrait-3053489/ -->
-          <img src="https://assets.codepen.io/9177687/woman-g1af8d3deb_640.jpg" width="100%" crossorigin="anonymous" title="Click to get detection!" />
-        </div>
-    </div>
-    <div style="margin: 10px 0;width: 100%;display: flex;align-items: center;justify-content: center;">
-      <button id="webcamButton" class="mdc-button mdc-button--raised" style="margin: 0 auto;">
-        <span class="mdc-button__ripple"></span>
-        <span class="mdc-button__label">ENABLE WEBCAM</span>
-      </button>
-    </div>
-
-    <div id="liveView" class="videoView">
-      <div style="position: relative;">
-        <video id="webcam" style="width: 1280px; height: 720px; position: abso" autoplay playsinline></video>
-        <canvas class="output_canvas" id="output_canvas" width="1280" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
-      </div>
-    </div>
-  </section>
   <footer>
     <div class="foot">
       <ul>

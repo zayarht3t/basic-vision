@@ -8,8 +8,50 @@
     <!-- Box-icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .act{
+            opacity: 1;
+        }
+
+        .unact{
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo" style="color: black;">Vision Hub</div>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+    
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutus/aboutus.html">About</a></li>
+            <li><a href="/blogs/index.html">Blogs</a></li>
+    
+            <li class="services">
+              <a href="/services/index.html">Services</a>
+            </li>
+    
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/contact-form-16/index.html">Contact</a></li>
+          </div>
+        </ul>
+        <div class="contact act">
+          <a href="/register/signin.html" style="color: black;">Sign In</a>
+        </div>
+        <div class="user act">
+            <a href="/register/signin.html" style="color: black;">User</a>
+          </div>
+      </nav>
     <section class="about container" id="about">
         <div class="contentBx">
             <h2 class="titleText">Catch up with the trending topics</h2>
@@ -179,5 +221,23 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
+    <script>
+        const authValue = localStorage.getItem("auth");
+        const userTag = document.getElementsByClassName("user")[0];
+        const contactTag = document.getElementsByClassName("contact")[0];
+
+        userTag.addEventListener("click",()=>{
+            localStorage.removeItem("auth");
+        })
+
+        if (authValue === "1") {
+            userTag.classList.remove("act");
+            contactTag.classList.add("unact");
+        } else {
+            userTag.classList.add("unact");
+            contactTag.classList.add("act");
+        }
+
+    </script>
 </body>
 </html>
