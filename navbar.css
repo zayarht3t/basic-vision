@@ -135,6 +135,10 @@ input[type=checkbox] {
         text-align: center;
       }
 
+      .emailSection{
+        display: none;
+        opacity: 0;
+      }
       .cards{
         display: flex;
         flex-direction: column;
@@ -408,6 +412,21 @@ input[type=checkbox] {
     }
   }
 
+  @media(max-width:767px){
+    /* .emailLogo{
+      display: none;;
+    }
+    .emailText{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } */
+
+    .emailSection{
+      display: none;
+    }
+  }
   .emailSection{
     display: flex;
     background-color: #51DBFF;
@@ -450,7 +469,8 @@ input[type=checkbox] {
 
   .emailBtn{
     border: none;
-    background-color: burlywood;
+    font-weight: bold;
+    background-color: orange;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 6px;
     color: white;
@@ -466,6 +486,10 @@ input[type=checkbox] {
 footer{
   margin: 40px 0;
   width: 100%;
+  background-color: #1b1229;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .foot{
@@ -473,7 +497,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  margin-top: 20px;
 }
 
 .foot > ul{
