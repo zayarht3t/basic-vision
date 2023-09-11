@@ -5,78 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About us section</title>
   <link rel="stylesheet" href="aboutus.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-  <header>
-    <span id="logo">Logosection</span>
-    <span id="projectname"></span>
-    <nav>
-      <a href="#home" id="h">Home</a>
-      <a href="#Labs" id="l">Labs</a>
-      <a href="#Blogs" id="b">Blogs</a>
-      <a href="#Lessons" id="l">Lessons</a>
-      <a href="#AboutUs" id="a">About Us</a>
-      <a href="#contectus" id="contectus">Contect Us</a>
-    </nav>
-  </header>
-  <div id="upperpage">
-    <div class="layout">
-      
-        <img src="../ab.png" class="image"alt="Group image">
-      
-      <div class="content">
-        <span class="title">Who are we?</span><br>
-            Lorem ipsum dolor sit,
-            amet consectetur adipisicing elit. 
-            Saepe mollitia tenetur adipisci soluta
-              voluptatem distinctio quaerat accusamus
-              quidem, sapiente magnam ratione suscipit, 
-              neque error, ipsum excepturi at cupiditate 
-              cum repellat.
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Vision Hub</div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/aboutus/aboutus.html">About</a></li>
+        <li><a href="/blogs/index.html">Blogs</a></li>
+
+        <li class="services">
+          <a href="/services/index.html">Services</a>
+        </li>
+        <li><a href="/contact-form-16/index.html">Contact</a></li>
+      </div>
+    </ul>
+    <div class="contact" style="cursor: pointer;">
+      <a href="/register/signup.html">SIGN IN</a>
+    </div>
+  </nav>
+  <div class="section">
+    <div class="sec">
+      <div class="heroLogo">
+        <img class="secImg" src="/ab.png" width="700" height="700" alt="" srcset="">
+      </div>
+      <div class="secTextContainer">
+        <h1>Who we are?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, delectus perspiciatis consequatur accusantium repellat at rem adipisci rerum architecto alias culpa quaerat soluta hic quae dolor officiis quibusdam vitae temporibus.</p>
       </div>
     </div>
-    <div class="layout">
-      
-      <div class="content">
-        <span class="title">Our vision</span><br>
-            Lorem ipsum dolor sit,
-            amet consectetur adipisicing elit. 
-            Saepe mollitia tenetur adipisci soluta
-              voluptatem distinctio quaerat accusamus
-              quidem, sapiente magnam ratione suscipit, 
-              neque error, ipsum excepturi at cupiditate 
-              cum repellat.
+    <div class="sec" style="flex-direction: row-reverse;">
+      <div class="heroLogo">
+        <img class="secImg" src="/ab1.png" width="700" height="700" alt="" srcset="">
       </div>
-      <img src="../ab1.png" class="image"alt="Group image">
-    </div>
-    <div class="layout">
-      
-        <img src="../ab2.png" class="image" alt="Group image">
-      
-      <div class="content">
-        <span class="title">What we do?</span><br>
-            Lorem ipsum dolor sit,
-            amet consectetur adipisicing elit. 
-            Saepe mollitia tenetur adipisci soluta
-              voluptatem distinctio quaerat accusamus
-              quidem, sapiente magnam ratione suscipit, 
-              neque error, ipsum excepturi at cupiditate 
-              cum repellat.
+      <div class="secTextContainer">
+        <h1>Who we are?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, delectus perspiciatis consequatur accusantium repellat at rem adipisci rerum architecto alias culpa quaerat soluta hic quae dolor officiis quibusdam vitae temporibus.</p>
       </div>
     </div>
-    <div class="layout">
-      <div class="content">
-      <span class="title">Join Us on This Journey</span><br>
-          We invite you to join us on this exciting journey
-          as we shape the future of human-computer interocation. Explore
-          out website to learn more about our products services,
-          and the incredible potential of gesture recognition
-          technology. Feel free to reach out to us with any questions 
-          or inquiries-we're here to revolutionize the way you interact with the digital world.<br>
-          <button type="submit">Explore more</button>
+    <div class="sec">
+      <div class="heroLogo">
+        <img class="secImg" src="/ab2.png" width="700" height="700" alt="" srcset="">
       </div>
-          <img src="../ab3.png" alt="img4">
+      <div class="secTextContainer">
+        <h1>Who we are?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, delectus perspiciatis consequatur accusantium repellat at rem adipisci rerum architecto alias culpa quaerat soluta hic quae dolor officiis quibusdam vitae temporibus.</p>
+      </div>
     </div>
-  </div>
+  </div>  
+  <footer>
+    <div class="foot">
+      <ul>
+        <li>Web Design</li>
+        <li>Development</li>
+        <li>Hosting</li>
+      </ul>
+      <ul>
+        <li>Web Design</li>
+        <li>Development</li>
+        <li>Hosting</li>
+      </ul>
+      <ul>
+        <li>Web Design</li>
+        <li>Development</li>
+        <li>Hosting</li>
+      </ul>
+    </div>
+    <div class="icons"
+      style="display: flex;align-items: center;justify-content: center;margin: 20px auto;padding: 10px;gap: 20px;">
+      <div
+        style="width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background-color: black;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 50%;">
+        <a href="#" style="color: white;"><i class="ri-twitter-fill"></i></a>
+      </div>
+      <div
+        style="width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background-color: black;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 50%;">
+        <a href="#" style="color: white;"><i class="ri-facebook-box-fill"></i></a>
+      </div>
+      <div
+        style="width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background-color: black;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 50%;">
+        <a href="#" style="color: white;"><i class="ri-instagram-fill"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

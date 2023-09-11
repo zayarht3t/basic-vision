@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
   <meta charset="UTF-8" />
@@ -39,8 +39,8 @@
         <li><a href="/contact-form-16/index.html">Contact</a></li>
       </div>
     </ul>
-    <div class="contact">
-      Contact us
+    <div class="contact" style="cursor: pointer;">
+      <a href="/register/signup.html">SIGN IN</a>
     </div>
   </nav>
   <div class="mainContent">
@@ -209,6 +209,58 @@
       </div>
     </div>
   </div>
+  <div class="challenges">
+    <h1>Solutions for Some Common Challenges</h1>
+    <div class="challengeCard" style="display: flex;flex-direction: row;gap: 40px;margin: 20px 0;padding: 20px;">
+      <div class="Ccard" style="width: 300px;padding: 20px;border-radius: 8px;">
+        <div class="" style="overflow: hidden;">
+          <img src="vision_graphic_480.png" alt="">
+        </div>
+        <div class="challengeContainer">
+          <h3 style="margin-bottom: 10px;">Vision</h3>
+          <p>
+            Analyze things in images and videos. 
+          </p>
+        </div>      
+      </div>
+      <div class="Ccard" style="width: 300px;padding: 20px;border-radius: 8px;">
+        <div class="" style="overflow: hidden;">
+          <img src="natural_language_graphic_480.png" alt="">
+        </div>
+        <div class="challengeContainer">
+          <h3 style="margin-bottom: 10px;">Natural</h3>
+          <p>
+            Understand meanings behind text. 
+          </p>
+        </div>      
+      </div>
+      <div class="Ccard" style="width: 300px;padding: 20px;border-radius: 8px;">
+        <div class="" style="overflow: hidden;">
+          <img src="audio_graphic_480.png" alt="">
+        </div>
+        <div class="challengeContainer">
+          <h3 style="margin-bottom: 10px;">Audio</h3>
+          <p>
+            Listen and recognize sounds. 
+          </p>
+        </div>      
+      </div>
+      <div class="Ccard" style="width: 300px;padding: 20px;border-radius: 8px;">
+        <div class="" style="overflow: hidden;">
+          <img src="others_graphic_480.png" alt="">
+        </div>
+        <div class="challengeContainer">
+          <h3 style="margin-bottom: 10px;">Other</h3>
+          <p>
+            More solutions coming soon.
+          </p>
+        </div>      
+      </div>
+
+      
+
+    </div>
+  </div>
   <div class="emailSection reveal" style="margin: 40px 0;border-radius: 8px;">
     <div class="emailLogo">
       <img src="eye.png" width="500" height="500" alt="">
@@ -228,6 +280,7 @@
 
     </div>
   </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="background-color: red;padding: 20px;border-radius: 50%;cursor: pointer;;color: white;">^</button>
   <footer>
     <div class="foot">
       <ul>
@@ -263,6 +316,24 @@
     </div>
   </footer>
   <script>
+    let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
     const images = ["ab.png", "ab1.png", "ab2.png", "ab3.png", "ab4.png", "eye.png"]; // Replace these with your image URLs
     let currentIndex = 0;
     const imageElement = document.getElementsByClassName("heroLogo")[0];
