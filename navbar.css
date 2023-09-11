@@ -132,8 +132,30 @@ input[type=checkbox] {
       }
 
       .mainContent{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
+
+      .innerLogo{
+        width: 200px;
+      }
+
+    .code{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .codeCard{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 0 10px;
+    }
+
+
+
 
       .vision{
         text-align: center;
@@ -551,4 +573,40 @@ footer{
 .foot > ul > li{
   font-size: 18px;
   cursor: pointer;
+}
+
+.code{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.codeCard{
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.codeText{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.codeText > p{
+  font-size: 14px;
+}
+
+.codeText > button{
+  width: fit-content;
+  padding: 10px 7px;
+  background-color: transparent;
+  color: blue;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid blue;
 }
