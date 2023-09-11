@@ -6,8 +6,8 @@ $(function() {
 
 	var contactForm = function() {
 
-		if ($('#contactForm').length > 0 ) {
-			$( "#contactForm" ).validate( {
+		if ($('#contact-form').length > 0 ) {
+			$( "#contact-form" ).validate( {
 				rules: {
 					name: "required",
 					email: {
@@ -41,7 +41,7 @@ $(function() {
 		               if (msg == 'OK') {
 		               	$('#form-message-warning').hide();
 				            setTimeout(function(){
-		               		$('#contactForm').fadeOut();
+		               		$('#contact-form').fadeOut();
 		               	}, 1000);
 				            setTimeout(function(){
 				               $('#form-message-success').fadeIn();   

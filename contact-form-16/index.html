@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,6 +17,101 @@
 
     <title>Contact Form #6</title>
   </head>
+  <style>
+    .loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #e01b24;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: white;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: white;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  <script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('gLJcUuyu33jYgqr1H');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          document.getElementsByClassName('loader')[0].style.display = 'block';
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_aiwgw4m', 'template_mn0fhdh', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    document.getElementById('form-message-success').style.display = 'block';
+                    document.getElementsByClassName('loader')[0].style.display = 'none';
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
   <body>
   
 
@@ -39,20 +134,21 @@
             </div>
             <div class="col-md-6">
               
-              <form class="mb-5" method="post" id="contactForm" name="contactForm">
+              <form class="mb-5" method="post" id="contact-form" name="contactForm">
                 <div class="row">
+                  <input type="hidden" name="contact_number">
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    <input type="text" class="form-control" name="user_name" id="name" placeholder="Your name">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                    <input type="text" class="form-control" name="user_email" id="email" placeholder="Email">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                    <input type="text" class="form-control" name="message" id="subject" placeholder="Subject">
                   </div>
                 </div>
                 <div class="row">
@@ -68,7 +164,8 @@
                 </div>
               </form>
 
-              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-warning mt-4"></div>
+              <div class="loader">Loading...</div>
               <div id="form-message-success">
                 Your message was sent, thank you!
               </div>
